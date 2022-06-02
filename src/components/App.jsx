@@ -6,7 +6,16 @@ import '../style/styles.css';
 import ItemListContainer from "./ItemListContainer";
 
 
+
+
+
 const App = () => {
+  
+  // const resultado = useState(0)//funciona como variable,es raro guardar funciones,
+  // const contador = resultado[0]
+  // const cambiarContador = resultado[1]
+
+  
   return (
     <>
       <Header />
@@ -14,6 +23,7 @@ const App = () => {
       <ItemListContainer greeting="Bienvenidos a Shopify"
       />
       <Main />
+
       <Footer />
     </>
   );
