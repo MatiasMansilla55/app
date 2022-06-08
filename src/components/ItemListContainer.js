@@ -1,16 +1,44 @@
 import React from 'react'
-import ItemCount  from './ItemCount';
-const ItemListContainer = (props) => {
+import ItemList from './ItemList';
+import { useEffect, useState} from 'react'
+import customFetch from '../utils/CustomFetch';
+import productos from '../utils/productos';
 
-  console.log(props.greeting);
+
+const ItemListContainer = (props) => {
+  
+  const [item, setItem] = useState([])
+
+  useEffect(() =>{
+    customFetch(3000, productos)
+    .then(r =>setItem(r))
+  }, [item])
+  console.log([item]);
+
+ console.log(props.greeting);
+ 
+ if(item.length>0){
   return (
       <>
         <h1 className=' mt-5 text-center'>
         {props.greeting}
         </h1>
-        <ItemCount stock={5} initial={1} onAdd={()=>{}}/>
-        </>
+        <ItemList products={item}/>
+      
+        
+     </>
   )
+  }else{
+  return (
+    <div>
+      <h2>
+        {props.greeting}
+      </h2>
+      <p>Cargando...</p>
+      <ItemList products={item}/>
+    </div>
+  )
+  }
 }
 
 export default ItemListContainer

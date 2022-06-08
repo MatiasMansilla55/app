@@ -1,24 +1,31 @@
-import React from 'react'
+
 import {useState} from "react"
 
 const 
-ItemCount = ({stock, initial, onAdd}) => {
+ItemCount = ({stock}) => {
 
-    const propOnAdd = onAdd;
-    console.log(propOnAdd);
+
     
-  const [contador, setContador] = useState(initial)
+  const [contador, setContador] = useState(0)
   
+
+
   const aumentarContador = () =>{
     console.log("aumentarContador");
     
     if(contador <stock) {setContador(contador + 1)}   
   }
   const bajarContador = () =>{
-    if(contador > initial ){
+    if(contador > 0 ){
       setContador(contador - 1)
     }
   }
+
+function onAdd () {
+
+}
+
+
   return (
     <div className='mt-5 d-flex justify-content-center '>
         
