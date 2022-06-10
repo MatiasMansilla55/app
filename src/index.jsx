@@ -6,7 +6,7 @@ import React from 'react';
 //Traigo la libreria de ReactDOM
 import ReactDOM from 'react-dom/client';
 
-import App from "./components/App";
+import App from "../src/ui/layout/app/App";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

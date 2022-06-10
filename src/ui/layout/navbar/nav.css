@@ -1,0 +1,8 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav a{
+    list-style: none;
+    text-decoration: none;
+}

@@ -1,9 +1,11 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
-import Navbar from "./Navbar";
-import '../style/styles.css';
-import ItemListContainer from "./ItemListContainer";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
+import Main from "../main/Main";
+import Navbar from "../navbar/Navbar";
+import '../../../style/styles.css';
+
+import ItemListContainer from "../../page/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "../../page/ItemDetailContainer/ItemDetailContainer";
 
 
 
@@ -22,6 +24,7 @@ const App = () => {
       <Navbar />
       <ItemListContainer greeting="Bienvenidos a Shopify"
       />
+      <ItemDetailContainer/>
       <Main />
 
       <Footer />

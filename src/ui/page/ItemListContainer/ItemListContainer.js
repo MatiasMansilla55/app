@@ -1,8 +1,9 @@
 import React from 'react'
-import ItemList from './ItemList';
+import ItemList from '../ItemList/ItemList';
 import { useEffect, useState} from 'react'
-import customFetch from '../utils/CustomFetch';
-import productos from '../utils/productos';
+import {customFetch} from '../../../utils/productos';
+
+
 
 
 const ItemListContainer = (props) => {
@@ -10,7 +11,7 @@ const ItemListContainer = (props) => {
   const [item, setItem] = useState([])
 
   useEffect(() =>{
-    customFetch(3000, productos)
+    customFetch()
     .then(r =>setItem(r))
   }, [item])
   console.log([item]);

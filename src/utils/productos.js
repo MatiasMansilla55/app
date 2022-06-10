@@ -2,9 +2,9 @@
 
 const productos = [{
     id:1,
-    name:'Producto 1',
-    precio: 200,
-    descripcion: 'Descripcion del producto 1',
+    title:'Producto 1',
+    price: 200,
+    description: 'Descripcion del producto 1',
     image: 'http://picsum.photos/200/300?image=1',
     stock: 4
 
@@ -12,22 +12,46 @@ const productos = [{
 },
 {
     id:2,
-    name: 'Producto 2',
-    precio: 50,
-    descripcion: 'Descripcion del producto 2',
+    title: 'Producto 2',
+    price: 50,
+    description: 'description del producto 2',
     image: 'http://picsum.photos/200/300?image=2',
     stock: 5
 },
 {
     id:3,
-    name: 'Producto 3',
-    precio: 100,
+    title: 'Producto 3',
+    price: 100,
     descripcion: 'Descripcion del producto 3',
     image: 'http://picsum.photos/200/300?image=3',
     stock: 2
 }
     
 ]
-  
+ 
+export const product= {
+id:1,
+title:'Producto 1',
+price: 200,
+description: 'Descripcion del producto 1',
+image: 'http://picsum.photos/200/300?image=1',
+stock: 4
+}
 
-export default productos
+export const customFetch = () =>{
+    return new Promise ((resolve) =>{
+        setTimeout(() =>{
+            resolve(productos);
+        }, 2000)
+    })
+}
+
+export const MockProduct = () =>{
+    return new Promise ((resolve) =>{
+        setTimeout(() =>{
+            resolve(product)
+        }, 2000)
+    })
+}
+
+export default productos;

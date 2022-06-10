@@ -16,14 +16,14 @@ figure,
 picture {
     margin: 0; 
 }
-.nav{
+/* .nav{
     display: flex;
     justify-content: space-between;
 }
 .nav a{
     list-style: none;
     text-decoration: none;
-}
+} */
 
 .container{
     display: flex;
