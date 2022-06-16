@@ -16,14 +16,9 @@ figure,
 picture {
     margin: 0; 
 }
-/* .nav{
-    display: flex;
-    justify-content: space-between;
+html,body,#root{
+    height: 100vh;
 }
-.nav a{
-    list-style: none;
-    text-decoration: none;
-} */
 
 .container{
     display: flex;

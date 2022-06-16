@@ -1,11 +1,12 @@
-.nav{
+.footer{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     background-color: rgb(36, 190, 36);
+    min-height: 10vh;
     
 }
-.nav a{
+.footer a{
     list-style: none;
     text-decoration: none;
     color:black;

@@ -3,6 +3,12 @@ import ItemCount from "../ItemCount/ItemCount";
 
 
 const ItemDetail = ({product}) => {
+
+  const onAdd = (cantidadSeleccionada) =>{
+    console.log("Desde Item Detail:" + cantidadSeleccionada)
+
+  }
+
   return (
    
     <div className= 'container w-50'>
@@ -11,7 +17,7 @@ const ItemDetail = ({product}) => {
     <p>{product.description}</p>
     <p>${product.price}</p>
     <p>{product.stock}</p>
-    <ItemCount stock={product.stock} initial={1}/>
+    <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/>
     
     </div>
     

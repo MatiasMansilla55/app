@@ -2,7 +2,7 @@
 import {useState} from "react"
 
 const 
-ItemCount = ({stock}) => {
+ItemCount = ({stock,onAdd,initial}) => {
 
 
     
@@ -21,9 +21,10 @@ ItemCount = ({stock}) => {
     }
   }
 
-function onAdd () {
+  const confimarContador = (e) =>{
+    onAdd(contador)
+  }
 
-}
 
 
   return (
@@ -31,7 +32,7 @@ function onAdd () {
         
         <p> El contador va: {contador}
       <button className= "alert alert-success" onClick={aumentarContador}>+</button>
-      <button className= "alert alert-primary"onClick={onAdd}>Confirmar</button>
+      <button className= "alert alert-primary"onClick={confimarContador}>Confirmar</button>
       <button  className= "alert alert-danger"onClick={bajarContador}>-</button>
       </p>
         

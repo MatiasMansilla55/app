@@ -1,0 +1,15 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item img{
+    width: 25vh ;
+    margin:auto;
+}
+
+.item:hover{
+    transform: scale(1.05);
+    transition-timing-function: 1s;
+}
