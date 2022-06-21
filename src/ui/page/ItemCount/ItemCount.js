@@ -1,8 +1,9 @@
 
 import {useState} from "react"
 
-const 
-ItemCount = ({stock,onAdd,initial}) => {
+
+
+const ItemCount = ({stock,onAdd,initial}) => {
 
 
     
@@ -34,6 +35,7 @@ ItemCount = ({stock,onAdd,initial}) => {
       <button className= "alert alert-success" onClick={aumentarContador}>+</button>
       <button className= "alert alert-primary"onClick={confimarContador}>Confirmar</button>
       <button  className= "alert alert-danger"onClick={bajarContador}>-</button>
+      
       </p>
         
         

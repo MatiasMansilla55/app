@@ -1,0 +1,9 @@
+.Detail-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Detail-container img{
+    width: 40vh;
+}
