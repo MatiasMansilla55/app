@@ -17,14 +17,14 @@ export const MiProvider = ({children}) =>{
 
 
     const addProduct = (item,quantity) => {
-        if(isIncart(item.id)) {
-            setCart(cart.map(product => {
-                return product.id === item.id ? {...product,quantity: product.quantity + quantity} : product
-            }));
-        }else {
-            setCart([...cart,{...item, quantity}])
-        }
-        
+         if(isIncart(item.id)) {
+             setCart(cart.map(product => {
+                 return product.id === item.id ? {...product,quantity: product.quantity + quantity} : product
+             }));
+         }else {
+             setCart([...cart,{...item, quantity}])
+         }
+       
     }
  
 

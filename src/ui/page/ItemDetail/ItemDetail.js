@@ -11,21 +11,21 @@ const ItemDetail = ({product}) => {
   const[cantidadAComprar, setCantidadAComprar] = useState(true)
   
 
- 
+  
+  const resultado =useContext(context)
+  console.log(resultado)
 
- const onAdd = (cantidadSeleccionada) =>{
-  console.log("desde item detail:"+ cantidadSeleccionada);
- cantidadSeleccionada = cantidadAComprar;
+ const onAdd = (quantity) =>{
+  resultado.addProduct(product,quantity)
+ quantity = cantidadAComprar;
   setCantidadAComprar (cantidadAComprar===false) ;
 
   }
 
-  const resultado =useContext(context)
-  console.log(resultado)
 
-  const suministrarProducto = () =>{
-    resultado.addProduct(product)
-  }
+
+    
+ 
   
 
   return (
@@ -37,7 +37,7 @@ const ItemDetail = ({product}) => {
     <p>precio:${product.price}</p>
     <p>Stock:{product.stock}</p>
    
-     {cantidadAComprar===true? <ItemCount className="item-count" stock={product.stock} initial={1} onAdd={onAdd}/>: <Link to="/cart"><button className="alert alert-success"onClick={suministrarProducto}>Comprar</button></Link>} 
+     {cantidadAComprar===true? <ItemCount className="item-count" stock={product.stock} initial={1} onAdd={onAdd}/>: <Link to="/cart"><button className="alert alert-success"onClick={onAdd}>Comprar</button></Link>} 
    
    
     
