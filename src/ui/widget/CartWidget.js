@@ -1,7 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
+import {context} from "../../api/context/CartContext/CartContext.js"
+import { NavLink } from "react-router-dom";
+
+
+// arrayDeProductos.forEach(producto =>if(producto.id==idDelProducto) {
+  
+// });
 
 const CartWidget = () => {
-  return <span className="rounded material-symbols-outlined ">shopping_cart_checkout</span>;
+
+  const resultado =useContext(context)
+  console.log(resultado.cantidad_total)
+  console.log(resultado)
+
+  return (
+  <NavLink to="/cart"><span className="rounded material-symbols-outlined ">shopping_cart_checkout{resultado.cantidad_total}</span></NavLink>
+  )
 };
 
 export default CartWidget;

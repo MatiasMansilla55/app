@@ -6,6 +6,7 @@ import ItemDetailContainer from "../../page/ItemDetailContainer/ItemDetailContai
 import ItemCount from "../../page/ItemCount/ItemCount";
 
 
+
 const Main = (props) => {
   return (
     <main className="layout">

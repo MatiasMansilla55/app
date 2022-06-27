@@ -8,7 +8,7 @@ import '../ItemListContainer/ItemListContainer.css'
 
 function ItemListContainer(props) {
     const [items, setItems] = useState([])
-
+    
     const { categoryId } = useParams()
     console.log(typeof categoryId)
 
