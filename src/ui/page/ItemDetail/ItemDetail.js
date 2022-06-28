@@ -1,4 +1,4 @@
-import React,{ useContext} from "react";
+import React,{useContext} from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState  } from "react";
 import '../ItemDetail/ItemDetail.css';
@@ -8,19 +8,20 @@ import {context} from "../../../api/context/CartContext/CartContext"
 
 const ItemDetail = ({product}) => {
 
-  const[cantidadAComprar, setCantidadAComprar] = useState(true)
+  const[cantidad, setCantidadAComprar] = useState(true)
   
-
   
   const resultado =useContext(context)
-  console.log(resultado)
+  // console.log(resultado)
 
- const onAdd = (quantity) =>{
-  resultado.addProduct(product,quantity)
- quantity = cantidadAComprar;
-  setCantidadAComprar (cantidadAComprar===false) ;
+ const onAdd = (cantidad) =>{
+  resultado.addProduct(product,cantidad)
+  
+ 
+  setCantidadAComprar (false) ;
 
   }
+
 
 
 
@@ -37,7 +38,7 @@ const ItemDetail = ({product}) => {
     <p>precio:${product.price}</p>
     <p>Stock:{product.stock}</p>
    
-     {cantidadAComprar===true? <ItemCount className="item-count" stock={product.stock} initial={1} onAdd={onAdd}/>: <Link to="/cart"><button className="alert alert-success"onClick={onAdd}>Comprar</button></Link>} 
+     {cantidad===true? <ItemCount className="item-count" stock={product.stock} initial={1} onAdd={onAdd}/>: <Link to="/cart"><button className="alert alert-success"onClick={()=>onAdd}>Terminar Comprar</button></Link>} 
    
    
     

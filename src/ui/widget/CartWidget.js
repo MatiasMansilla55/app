@@ -8,13 +8,14 @@ import { NavLink } from "react-router-dom";
 // });
 
 const CartWidget = () => {
+  
 
   const resultado =useContext(context)
-  console.log(resultado.cantidad_total)
+  
   console.log(resultado)
 
   return (
-  <NavLink to="/cart"><span className="rounded material-symbols-outlined ">shopping_cart_checkout{resultado.cantidad_total}</span></NavLink>
+  <NavLink to="/cart"><span className="rounded material-symbols-outlined ">shopping_cart_checkout{resultado.totalProducts() || ''}</span></NavLink>
   )
 };
 

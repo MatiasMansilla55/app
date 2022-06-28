@@ -5,9 +5,10 @@ import Main from "../main/Main";
 import '../../../style/styles.css';
 import { BrowserRouter } from "react-router-dom";
 import { MiProvider }from "../../../../src/api/context/CartContext/CartContext"
-
-
-
+import {app} from "../../../api/firebase/config/firebase"
+import {db} from "../../../api/firebase/config/firebase"
+console.log(app);
+console.log(db);
 const App = () => {
   
 
