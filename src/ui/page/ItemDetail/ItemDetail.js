@@ -31,20 +31,20 @@ const ItemDetail = ({product}) => {
 
   return (
    
-    <div className= 'Detail-container'>
-    <h1>{product.title}</h1>
-    <img src={product.image} alt={product.title}/>
-    <p>{product.description}</p>
-    <p>precio:${product.price}</p>
-    <p>Stock:{product.stock}</p>
+   <div className= 'Detail-container'>
+   <h1>{product.title}</h1>
+   <img src={product.image} alt={product.title}/>
+   <p>{product.description}</p>
+   <p>precio:${product.price}</p>
+   <p>Stock:{product.stock}</p>
    
-     {cantidad===true? <ItemCount className="item-count" stock={product.stock} initial={1} onAdd={onAdd}/>: <Link to="/cart"><button className="alert alert-success"onClick={()=>onAdd}>Terminar Comprar</button></Link>} 
+    {cantidad===true? <ItemCount className="item-count" stock={product.stock} initial={1} onAdd={onAdd}/>: <Link to="/cart"><button className="alert alert-success"onClick={()=>onAdd}>Terminar Comprar</button></Link>} 
    
    
     
-    </div>
+   </div>
     
-  );
+   );
 };
 
 export default ItemDetail;
