@@ -17,7 +17,7 @@ const firebaseConfig = {
   measurementId: "G-SVTB27X9H9"
 };
 
-// 3)Me autentico usando el metodod del paso 1 y los keys del 2
+// 3)Me autentico usando el metodo del paso 1 y los keys del 2
 export const app = initializeApp(firebaseConfig);
 
 //4) obtener una referencia/puntero a la base de datos

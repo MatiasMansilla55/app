@@ -6,7 +6,7 @@ const ItemCart = ({product}) => {
  const resultado=useContext(context)
 
   return (
-    <div className='Cart'>
+    <div className='Cart' >
         <img src={product.image} alt={product.title}/>
             <div>
                 <p>Titulo:{product.title}</p>
