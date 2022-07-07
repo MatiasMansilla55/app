@@ -13,7 +13,7 @@ export const MiProvider = ({children}) =>{
     const [cart, setCart] = useState([])
     
 
-    //funciones customizadas:
+ 
 
     const copia= [...cart]
  
@@ -29,16 +29,16 @@ export const MiProvider = ({children}) =>{
     }
  
 
- //remover Producto
+ 
     const removeProduct = (id) => setCart(copia.filter(product => product.id !==id))
   
      
     
 
-    //boton LimpiarCarrito:
+    
     const clearCart = () => setCart([]);
 
-    //esta en carrito?
+ 
     const isIncart = (id) => {
         return copia.find(product =>product.id ===id)? true:false
 

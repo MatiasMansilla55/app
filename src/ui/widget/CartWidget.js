@@ -3,10 +3,6 @@ import {context} from "../../api/context/CartContext/CartContext.js"
 import { NavLink } from "react-router-dom";
 
 
-// arrayDeProductos.forEach(producto =>if(producto.id==idDelProducto) {
-  
-// });
-
 const CartWidget = () => {
   
 

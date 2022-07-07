@@ -27,7 +27,6 @@ const App = () => {
   );
 };
 
-//export default variable
-//export variable
+
 
 export default App;
