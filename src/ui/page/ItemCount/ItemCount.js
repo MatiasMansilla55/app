@@ -15,7 +15,6 @@ const ItemCount = ({ stock, onAdd, initial }) => {
   };
 
   const confimarContador = (e) => {
-    
     onAdd(contador);
   };
 

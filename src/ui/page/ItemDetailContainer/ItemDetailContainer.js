@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { db } from "../../../api/firebase/config/firebase";
 import { collection, getDoc, doc } from "firebase/firestore";
+import { SkeletonCard } from "../Skeleton/ProductSkeleton";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -30,7 +31,7 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <div>{loading ? <p>cargando</p> : <ItemDetail product={product} />}</div>
+    <div>{loading ? <SkeletonCard /> : <ItemDetail product={product} />}</div>
   );
 };
 

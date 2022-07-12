@@ -5,9 +5,9 @@ import '../footer/Footer.css';
 const Footer = () => {
   return (
     <footer className='footer'>
-        <NavLink to="category/1">Categoria 1</NavLink>
-        <NavLink to="category/2">Categoria 2</NavLink>
-        <NavLink to="category/3">Categoria 3</NavLink>
+        <NavLink to="category/ropa">Categoria 1</NavLink>
+        <NavLink to="category/libros">Categoria 2</NavLink>
+        <NavLink to="category/informatica">Categoria 3</NavLink>
     </footer>
   )
 }
